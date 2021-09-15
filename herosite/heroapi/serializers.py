@@ -5,6 +5,7 @@ from rest_framework import serializers
 
 from .models import Hero
 from .models import Publisher
+from .models import Superpower
 
 class HeroSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
