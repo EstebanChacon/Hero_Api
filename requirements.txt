@@ -1,4 +1,4 @@
 pylint
 pylint-exit
 django
-django-rest
+djangorestframework
