@@ -12,12 +12,12 @@ class HeroSerializer(serializers.HyperlinkedModelSerializer):
         model = Hero
         fields = ('id','name', 'alias')
 
-class PublisherViewSet(serializers.HyperlinkedModelSerializer):
+class PublisherSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Publisher
         fields = ('name')
 
-class SuperpowerViewSet(serializers.HyperlinkedModelSerializer):
+class SuperpowerSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Superpower
         fields = ('name')

@@ -1,7 +1,8 @@
 from django.core.management.base import BaseCommand
-from heroapi.models import heroapi
-import csvfile
+from heroapi.models import Hero
 
-class command(BaseCommand):
+import csv
+
+class Command(BaseCommand):
     def handle(self, **options):
-        print("Importing data ...") 
+        print("Importing data ...")
