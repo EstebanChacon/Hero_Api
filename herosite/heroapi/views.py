@@ -13,18 +13,9 @@ class HeroViewSet(viewsets.ModelViewSet): #ModelViewSet handles GET and POST
     serializer_class = HeroSerializer
 
 class PublisherViewSet(viewsets.ModelViewSet): #ModelViewSet handles GET and POST
-<<<<<<< HEAD
     queryset = Publisher.objects.all().order_by('name')
     serializer_class = PublisherSerializer
 
 class SuperpowerViewSet(viewsets.ModelViewSet): #ModelViewSet handles GET and POST
     queryset = Superpower.objects.all().order_by('name')
     serializer_class = SuperpowerSerializer
-=======
-    queryset = Hero.objects.all().order_by('name')
-    serializer_class = HeroSerializer
-
-class SuperpowerViewSet(viewsets.ModelViewSet): #ModelViewSet handles GET and POST
-    queryset = Hero.objects.all().order_by('name')
-    serializer_class = HeroSerializer
->>>>>>> b2dcbbcca47ec775f4ee5551bc4950bd5864c1e6
