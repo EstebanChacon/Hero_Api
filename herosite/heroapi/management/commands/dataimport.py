@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from heroapi.models import Hero
+from heroapi.models import Hero, Publisher
 
 import csv
 
@@ -12,10 +12,20 @@ class Command(BaseCommand):
                         for row in csv.DictReader(csvfile, skipinitialspace=True)]
 
             for item in herolist:
+                publisher_params = {
+                    "name": item['creator']
+                }
+
+                publisher = Publisher(**publisher_params)
+                publisher.save()
+                print(f"{publisher.name} created ...")
+
                 hero_params = {
                     "name": item['name'],
-                    "alias": item['real_name']
+                    "alias": item['real_name'],
+                    "publisher": publisher_params["name"]
                 }
+
                 hero = Hero(**hero_params)
                 hero.save()
                 print(f"{hero.name} created ...")

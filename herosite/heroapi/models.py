@@ -17,7 +17,7 @@ class Publisher(models.Model):
 class Hero(models.Model):
     name = models.CharField(max_length=80)
     alias = models.CharField(max_length=80)
-    publisher = models.ForeignKey(Publisher, on_delete=models.CASCADE, default = None)
+    publisher = models.ForeignKey(Publisher, on_delete=models.CASCADE, default = None, null = True)
     superpowers = models.ManyToManyField(Superpower)
     def __str__(self):
         return str(self.name)

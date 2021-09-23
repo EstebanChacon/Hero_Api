@@ -10,12 +10,12 @@ from .models import Superpower
 class HeroSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Hero
-        fields = ('id','name', 'alias')
+        fields = ('id','name', 'alias', 'publisher')
 
 class PublisherSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Publisher
-        fields = ('name')
+        fields = ('id','name')
 
 class SuperpowerSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
