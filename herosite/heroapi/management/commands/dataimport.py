@@ -6,7 +6,7 @@ import csv
 class Command(BaseCommand):
     def handle(self, **options):
         print("Importing data ...")
-        CSV_FILE = '../superhero_dataset_full/superheroes_test_dataset.csv'
+        CSV_FILE = './superhero_dataset_full/superheroes_test_dataset.csv'
         with open(CSV_FILE, newline='', encoding="utf-8") as csvfile:
             herolist = [{k: v for k, v in row.items()}
                         for row in csv.DictReader(csvfile, skipinitialspace=True)]

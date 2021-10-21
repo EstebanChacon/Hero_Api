@@ -2,3 +2,4 @@ pylint
 pylint-exit
 django
 djangorestframework
+psycopg2
